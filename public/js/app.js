@@ -5,5 +5,6 @@
     'ui.router',
     'app.config',
     'app.services',
-    'app.home'
+    'app.home',
+    'app.collaborators'
 ]))

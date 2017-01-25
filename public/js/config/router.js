@@ -11,6 +11,10 @@
                 url: '/',
                 template: '<home></home>'
             })
+            .state('app.collaborators', {
+                url: '/collaborators',
+                template: '<collaborators></collaborators>'
+            })
     }])
 
 })(angular.module('app.config'))
