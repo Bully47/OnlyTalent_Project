@@ -1,0 +1,22 @@
+{
+    "name": "OnlyTalent_Project",
+    "version": "1.0.0",
+    "description": "Small MEAN stack Application",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "angular": "^1.6.1",
+        "angular-ui-router": "^0.3.2",
+        "body-parser": "^1.15.2",
+        "cors": "^2.8.1",
+        "express": "^4.13.4",
+        "method-override": "^2.3.6",
+        "mongoose": "^4.6.5",
+        "morgan": "^1.7.0"
+    }
+}
