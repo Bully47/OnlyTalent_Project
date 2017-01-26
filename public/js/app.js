@@ -6,5 +6,6 @@
     'app.config',
     'app.services',
     'app.home',
-    'app.collaborators'
+    'app.collaborators',
+    'app.editcollaborators'
 ]))

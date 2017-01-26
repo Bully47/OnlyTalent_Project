@@ -1,8 +1,35 @@
-<section>
-    <h1>Hello World 2.0</h1>
+<style>
+    table {
+        border-collapse: collapse;
+    }
 
-    <div class="container" ng-repeat="collaborator in $ctrl.collaborators track by $index">
-        <h4>name</h4>
-        <p>{{collaborator.name}}</p>
-    </div>
+    td,
+    th {
+        border: 1px solid black;
+    }
+</style>
+
+<section>
+    <h1>OnlyTalent Collaborators list</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th><a ui-sref="app.editcollaborators">Edit</a></th>
+        </tr>
+        <tr ng-repeat="collaborator in $ctrl.collaborators track by $index">
+            <td>{{collaborator.name}}</td>
+            <td>{{collaborator.age}}</td>
+            <td>{{collaborator.city}}</td>
+            <td><button type="button" ng-click="$ctrl.delete($index, collaborator)">Delete</button></td>
+        </tr>
+        <tr>
+            <td><input type="text" ng-model="$ctrl.collaborator.name" placeholder="Name"></td>
+            <td><input type="number" ng-model="$ctrl.collaborator.age" placeholder="Age"></td>
+            <td><input type="text" ng-model="$ctrl.collaborator.city" placeholder="City"></td>
+            <td><button type="button" ng-click="$ctrl.add($ctrl.collaborator, newCollaborator)">Add</button></td>
+        </tr>
+    </table>
 </section>
