@@ -1,6 +1,6 @@
 # OnlyTalent_Project
 
-This is a small Angular application.
+This is a small Angular application, with a database, CRUD, populate and ui-router.
 
 ## Installation
 
