@@ -15,5 +15,8 @@ module.exports = (app) => {
     app.post('/collaborators', (req, res, next) => {
         return ctrl.create(req, res, next)
     })
+    app.put('/collaborators/:id', (req, res, next) => {
+        return ctrl.update(req, res, next)
+    })
 
 }

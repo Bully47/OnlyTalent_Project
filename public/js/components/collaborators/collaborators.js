@@ -18,6 +18,11 @@
                     this.collaborator = {}
                 })
             }
+            this.update = (collaborator) => {
+                collaboratorsService.update(collaborator).then((res) => {
+
+                })
+            }
         }
     })
 })(angular.module('app.collaborators'))

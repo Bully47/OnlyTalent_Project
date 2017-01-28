@@ -7,5 +7,4 @@
     'app.services',
     'app.home',
     'app.collaborators',
-    'app.editcollaborators'
 ]))

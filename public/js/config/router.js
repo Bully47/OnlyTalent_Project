@@ -15,10 +15,6 @@
                 url: '/collaborators',
                 template: '<collaborators></collaborators>'
             })
-            .state('app.editcollaborators', {
-                url: '/editcollaborators',
-                template: '<editcollaborators></editcollaborators>'
-            })
     }])
 
 })(angular.module('app.config'))

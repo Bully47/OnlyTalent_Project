@@ -11,6 +11,9 @@
             },
             add(newCollaborator) {
                 return $http.post('/api/collaborators', newCollaborator)
+            },
+            update(collaborator) {
+                return $http.put('/api/collaborators/' + collaborator._id, collaborator)
             }
         }
     })

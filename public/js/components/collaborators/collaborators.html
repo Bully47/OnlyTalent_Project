@@ -12,18 +12,26 @@
 <section>
     <h1>OnlyTalent Collaborators list</h1>
 
-    <table>
+    <table ng-init="edit = false">
         <tr>
             <th>Name</th>
             <th>Age</th>
             <th>City</th>
-            <th><a ui-sref="app.editcollaborators">Edit</a></th>
+            <th><button type="button" ng-click="edit = true">Edit</button></th>
+            <th ng-if="edit == true">Name</th>
+            <th ng-if="edit == true">Age</th>
+            <th ng-if="edit == true">City</th>
         </tr>
         <tr ng-repeat="collaborator in $ctrl.collaborators track by $index">
             <td>{{collaborator.name}}</td>
             <td>{{collaborator.age}}</td>
             <td>{{collaborator.city}}</td>
             <td><button type="button" ng-click="$ctrl.delete($index, collaborator)">Delete</button></td>
+            <td ng-if="edit == true"><input type="text" ng-model="collaborator.name"></td>
+            <td ng-if="edit == true"><input type="text" ng-model="collaborator.age"></td>
+            <td ng-if="edit == true"><input type="text" ng-model="collaborator.city"></td>
+            <td ng-if="edit == true" ng-click="$ctrl.update(collaborator)"><button type="button">Modify</button></td>
+            <td ng-if="edit == true"><button type="button">Cancel</button></td>
         </tr>
         <tr>
             <td><input type="text" ng-model="$ctrl.collaborator.name" placeholder="Name"></td>
