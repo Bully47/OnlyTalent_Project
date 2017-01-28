@@ -27,11 +27,15 @@
         <tr ng-repeat="collaborator in $ctrl.collaborators | filter:searchText">
             <td>{{collaborator.name}}</td>
             <td>{{collaborator.age}}</td>
-            <td>{{collaborator.city}}</td>
+            <td>{{collaborator.city.name}}</td>
             <td><button type="button" ng-click="$ctrl.delete($index, collaborator)">Delete</button></td>
             <td ng-if="edit == true"><input type="text" ng-model="collaborator.name"></td>
             <td ng-if="edit == true"><input type="text" ng-model="collaborator.age"></td>
-            <td ng-if="edit == true"><input type="text" ng-model="collaborator.city"></td>
+            <td ng-if="edit == true">
+                <select>
+                  <option>{{collaborator.city.name}}</option>
+                </select>
+            </td>
             <td ng-if="edit == true" ng-click="$ctrl.update(collaborator)"><button type="button">Modify</button></td>
         </tr>
         <tr>
