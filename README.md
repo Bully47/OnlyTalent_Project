@@ -2,8 +2,16 @@
 
 This is a small Angular application.
 
-##Installation
+## Installation
 
-"git clone <https://github.com/Bully47/OnlyTalent_Project
+```
+git clone https://github.com/Bully47/OnlyTalent_Project
 cd OnlyTalent_Project
-sudo npm i"
+sudo npm i
+```
+
+## Developpement
+
+```
+npm run dev
+```
