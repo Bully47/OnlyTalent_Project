@@ -19,6 +19,7 @@
                 })
             }
             this.update = (collaborator) => {
+                collaborator.city = collaborator.city._id
                 collaboratorsService.update(collaborator).then((res) => {
 
                 })
